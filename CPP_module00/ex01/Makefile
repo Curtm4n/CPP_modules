@@ -6,11 +6,15 @@
 #    By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/11 18:21:08 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/11 18:24:36 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/12 14:17:33 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
+
+SRCS = phonebook.cpp
+
+OBJS = $(SRCS:.cpp=.o)
 
 CC = clang++
 
