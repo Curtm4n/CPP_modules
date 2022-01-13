@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:13:40 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/13 17:20:43 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/13 23:13:26 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	add_contact(Phonebook *book, int index)
 	std::cout << "nickname: " && std::cin >> nickname;
 	std::cout << "phone number: " && std::cin >> phone_number;
 	std::cout << "darkest secret: " && std::cin >> darkest_secret;
-	book->contact[index - 1].set_info(index, first_name, last_name, nickname, phone_number, darkest_secret);
-	int a = book->contact[index - 1].get_index();
-       	std::cout << a << std::endl;
+	book->contact[index].set_info(index + 1, first_name, last_name, \
+		nickname, phone_number, darkest_secret);
+	std::cout << "You succesfully created a new contact !\n" << std::endl;
 }
 
 void	ft_phonebook(void)
@@ -62,7 +62,10 @@ void	ft_phonebook(void)
 		if (input == "EXIT")
 			break ;
 		else if (input == "SEARCH")
-			std::cout << "search command" << std::endl;
+		{
+			book.display_contact(contact_id - 1);
+			book.display_info(contact_id - 1);
+		}
 		else if (input == "ADD")
 		{
 			if (contact_id > 8)
@@ -70,7 +73,7 @@ void	ft_phonebook(void)
 				std::cout << "Your Phonebook cannot contain more than 8 contact, sorry" << std::endl;
 				continue ;
 			}
-			add_contact(&book, contact_id);
+			add_contact(&book, contact_id - 1);
 			contact_id++;
 		}
 		else

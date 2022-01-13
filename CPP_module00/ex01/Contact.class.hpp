@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 15:21:11 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/13 17:11:59 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/13 21:48:52 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ public:
 
 	Contact(void);
 	~Contact(void);
-	
-	int		get_index(void) const;
+
+	int			get_index(void) const;
 	std::string	get_info(int n) const;
-	void		set_info(int index, std::string first, std::string last, std::string nickname, std::string number, std::string secret);
+	void		set_info(int index, std::string first, std::string last, \
+		std::string nickname, std::string number, std::string secret);
 
 private:
 
