@@ -6,7 +6,7 @@
 #    By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/11 16:24:00 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/11 17:03:55 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/13 14:47:02 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,16 @@ SRCS =	megaphone.cpp
 
 OBJS =	$(SRCS:.cpp=.o)
 
-CC = 	clang++
+CXX = 	clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)
