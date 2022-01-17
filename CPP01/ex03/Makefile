@@ -6,13 +6,16 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/17 22:42:28 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/18 00:03:36 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = HI
+NAME = violence
 
-SRCS = main.cpp
+SRCS = main.cpp	\
+		Weapon.cpp	\
+		HumanA.cpp	\
+		HumanB.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
