@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:25:04 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/19 15:11:38 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/19 16:41:48 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ bool	ft_error(std::ifstream *ifs, std::string s1, std::string s2)
 
 int	ft_replace(std::string filename, std::string s1, std::string s2)
 {
-	std::ifstream		ifs(filename);
+	std::ifstream		ifs(filename.c_str());
 	std::stringstream	content;
 	std::string			str;
 
@@ -59,7 +59,7 @@ int	ft_replace(std::string filename, std::string s1, std::string s2)
 	ifs.close();
 	str = content.str();
 
-	std::ofstream	ofs(filename);
+	std::ofstream	ofs(filename.c_str());
 
 	if (s1 != s2)
 		str = ft_change(str, s1, s2);
