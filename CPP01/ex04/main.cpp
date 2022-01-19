@@ -6,49 +6,75 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:25:04 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/18 15:51:21 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/19 15:11:38 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 std::string	ft_change(std::string content, std::string s1, std::string s2)
 {
+	size_t		index;
+	size_t		ret;
 
+	index = 0;
+	ret = 0;
+	while ((ret = content.find(s1, index)) != std::string::npos)
+	{
+		content.insert(ret, s2);
+		content.erase(ret + s2.length(), s1.length());
+		index = ret + s2.length();
+	}
+	return (content);
 }
 
-void	ft_replace(char **av)
+bool	ft_error(std::ifstream *ifs, std::string s1, std::string s2)
 {
-	std::ifstream	ifs(av[0]);
-	std::string	filename = av[0];
-	std::string	s1 = av[1];
-	std::string	s2 = av[2];
-	std::string	content;
-
+	if (!ifs->is_open())
+	{
+		std::cout << "Error opening file" << std::endl;
+		return (true);
+	}
 	if (s1.empty() || s2.empty())
 	{
 		std::cout << "s1 and/or s2 shouldn't be empty" << std::endl;
-		return ;
+		ifs->close();
+		return (true);
 	}
+	return (false);
+}
+
+int	ft_replace(std::string filename, std::string s1, std::string s2)
+{
+	std::ifstream		ifs(filename);
+	std::stringstream	content;
+	std::string			str;
+
+	if (ft_error(&ifs, s1, s2))
+		return (1);
 	filename += ".replace";
-	ifs >> content;
-	
+	content << ifs.rdbuf();
+	ifs.close();
+	str = content.str();
+
 	std::ofstream	ofs(filename);
 
-	content = ft_change(content, s1, s2);	
-	ofs << content << std::endl;
-	ifs.close();
+	if (s1 != s2)
+		str = ft_change(str, s1, s2);
+	ofs << str;
 	ofs.close();
+	return (0);
 }
 
 int	main(int ac, char **av)
 {
 	if (ac != 4)
 	{
-		std::cout << "Error\nusage: ./replace filename s1 s2" << std::endl;
+		std::cout << "Error" << std::endl
+			<< "usage: ./replace filename s1 s2" << std::endl;
 		return (1);
 	}
-	ft_replace(av + 1);
-	return (0);
+	return (ft_replace(av[1], av[2], av[3]));
 }
