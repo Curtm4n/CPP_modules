@@ -6,7 +6,7 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/19 16:46:11 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/19 16:55:22 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS = main.cpp	\
 
 OBJS = $(SRCS:.cpp=.o)
 
-CXX = clang++
+CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 

@@ -6,15 +6,13 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/19 16:54:51 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/19 16:54:01 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = moreBrainzzz
+NAME = Karen2.0
 
-SRCS = main.cpp	\
-		Zombie.cpp	\
-		ZombieHorde.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
