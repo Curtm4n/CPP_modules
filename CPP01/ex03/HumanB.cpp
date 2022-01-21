@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 23:33:05 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/18 11:48:43 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/21 09:55:40 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	HumanB::attack(void) const
 {
 	if (this->_weapon)
 	{
-		std::cout << this->_name << " attacks with his ";
+		std::cout << this->_name << " attacks with their ";
 		std::cout << this->_weapon->getType() << std::endl;
 	}
 	else
