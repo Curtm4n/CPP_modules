@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:54:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/23 13:40:21 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/23 22:30:06 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,16 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hitPoint == 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already dead" << std::endl;
+		std::cout << this->_name << " is already dead" << std::endl;
 		return ;
 	}
-	std::cout << "Ouch, ClapTrap " << this->_name << " take " << amount << " points of damage" << std::endl;
+	std::cout << "Ouch, " << this->_name << " take " << amount << " points of damage" << std::endl;
 	if ((int)amount >= this->_hitPoint)
 		this->_hitPoint = 0;
 	else
 		this->_hitPoint -= amount;
 	if (this->_hitPoint == 0)
-		std::cout << "ClapTrap " << this->_name << " passed away, RIP little robot" << std::endl;
+		std::cout << this->_name << " passed away, RIP little robot" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
