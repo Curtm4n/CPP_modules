@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:44:41 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/21 12:54:23 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/23 13:24:14 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
-private:
+protected:
+
+	ClapTrap(void);
 
 	std::string	_name;
-	int		_hitPoint;
-	int		_energyPoint;
-	int		_attackDamage;
+	int			_hitPoint;
+	int			_energyPoint;
+	int			_attackDamage;
 
 };
 

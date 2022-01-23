@@ -6,31 +6,19 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:43:56 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/21 15:46:49 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/23 13:38:46 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap	bob("Bob");
+	ScavTrap	roger("Roger");
 
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.attack("Handsome Jack");
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.attack("Handsome Jack");
-	bob.takeDamage(12);
-	bob.attack("Handsome Jack");
-	bob.beRepaired(1);
-	bob.takeDamage(12);
+	roger.guardGate();
+	roger.attack("Bob");
+	roger.beRepaired(10);
 	return (0);
 }

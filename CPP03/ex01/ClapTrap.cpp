@@ -6,11 +6,16 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:54:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/21 15:44:44 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/23 13:40:21 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(void) : _name("default"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
+{
+	std::cout << "Am I empty ?" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
@@ -65,12 +70,12 @@ void	ClapTrap::takeDamage(unsigned int amount)
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (!this->_energyPoint && this->_hitPoint)
-		std::cout << "ClapTrap " << this->_name << " is too tired to repair itself" << std::endl;
+		std::cout << this->_name << " is too tired to repair itself" << std::endl;
 	if (this->_energyPoint && this->_hitPoint)
 	{
-		std::cout << "ClapTrap " << this->_name << " is repairing itself [ +" << amount << " hit points ]" << std::endl;
+		std::cout << this->_name << " is repairing itself [ +" << amount << " hit points ]" << std::endl;
 		this->_hitPoint += amount;
 		this->_energyPoint--;
-		std::cout << "ClapTrap now have " << this->_hitPoint << " hit points" << std::endl;
+		std::cout << this->_name << " now have " << this->_hitPoint << " hit points" << std::endl;
 	}
 }

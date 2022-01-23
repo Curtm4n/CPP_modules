@@ -6,14 +6,15 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/21 12:56:52 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/23 13:36:36 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = clapTrap
+NAME = scavTrap
 
 SRCS = main.cpp	\
-       ClapTrap.cpp
+       ClapTrap.cpp	\
+       ScavTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
