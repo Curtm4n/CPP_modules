@@ -6,11 +6,16 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:54:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 14:28:52 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:58:51 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(void) : _name("default"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
+{
+	std::cout << "ClapTrap default constructor" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
@@ -72,27 +77,27 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hitPoint == 0)
 	{
-		std::cout << this->_name << " is already dead" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is already dead" << std::endl;
 		return ;
 	}
-	std::cout << "Ouch, " << this->_name << " take " << amount << " points of damage" << std::endl;
+	std::cout << "Ouch, ClapTrap " << this->_name << " take " << amount << " points of damage" << std::endl;
 	if ((int)amount >= this->_hitPoint)
 		this->_hitPoint = 0;
 	else
 		this->_hitPoint -= amount;
 	if (this->_hitPoint == 0)
-		std::cout << this->_name << " passed away, RIP little robot" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " passed away, RIP little robot" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (!this->_energyPoint && this->_hitPoint)
-		std::cout << this->_name << " is too tired to repair itself" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is too tired to repair itself" << std::endl;
 	if (this->_energyPoint && this->_hitPoint)
 	{
-		std::cout << this->_name << " is repairing itself [ +" << amount << " hit points ]" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is repairing itself [ +" << amount << " hit points ]" << std::endl;
 		this->_hitPoint += amount;
 		this->_energyPoint--;
-		std::cout << this->_name << " now have " << this->_hitPoint << " hit points" << std::endl;
+		std::cout << "ClapTrap now have " << this->_hitPoint << " hit points" << std::endl;
 	}
 }

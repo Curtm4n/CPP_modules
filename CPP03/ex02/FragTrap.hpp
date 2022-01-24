@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:59:25 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 15:07:42 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 18:13:46 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class FragTrap : public ClapTrap
 
 public:
 
+	FragTrap(void);
 	FragTrap(std::string name);
 	FragTrap(FragTrap const & src);
 	~FragTrap(void);

@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 23:41:43 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 12:52:05 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 18:08:33 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class ScavTrap : public ClapTrap
 
 public:
 
+	ScavTrap(void);
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const & src);
 	~ScavTrap(void);

@@ -6,22 +6,23 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/24 17:27:37 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/24 17:51:29 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fragTrap
+NAME = diamondTrap
 
 SRCS = main.cpp	\
        ClapTrap.cpp	\
        ScavTrap.cpp	\
-       FragTrap.cpp
+       FragTrap.cpp	\
+       DiamondTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 RM = rm -f
 

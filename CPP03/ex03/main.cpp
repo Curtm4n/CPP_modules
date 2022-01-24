@@ -6,20 +6,16 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:43:56 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 18:16:09 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:44:09 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void)
 {
-	FragTrap	roger("Roger");
+	DiamondTrap	molo("Molo");
 
-	roger.attack("Bob");
-	roger.takeDamage(20);
-	roger.beRepaired(10);
-	roger.highFivesGuys();
+	molo.attack("Roger");
 	return (0);
 }

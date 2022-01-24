@@ -6,12 +6,20 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:02:14 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 16:27:49 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 18:11:05 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
+
+ScavTrap::ScavTrap(void) : ClapTrap()
+{
+	std::cout << "ScavTrap default constructor" << std::endl;
+	_hitPoint = 100;
+	_energyPoint = 50;
+	_attackDamage = 20;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
