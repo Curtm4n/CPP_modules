@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:02:14 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 14:39:49 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 16:27:39 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
 {
 	std::cout << "Derived copy constructor called" << std::endl;
-	*this = src;
 }
 
 ScavTrap::~ScavTrap(void)

@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:10:25 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 15:27:21 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 16:28:25 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 FragTrap::FragTrap(FragTrap const & src) : ClapTrap(src)
 {
 	std::cout << "this is my copy constructor" << std::endl;
-	*this = src;
 }
 
 FragTrap::~FragTrap(void)
