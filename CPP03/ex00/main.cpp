@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:43:56 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/21 15:46:49 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 12:38:53 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(void)
 	bob.attack("Handsome Jack");
 	bob.attack("Handsome Jack");
 	bob.attack("Handsome Jack");
+	bob.takeDamage(9);
 	bob.beRepaired(1);
 	bob.beRepaired(1);
 	bob.attack("Handsome Jack");

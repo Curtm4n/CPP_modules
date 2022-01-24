@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:54:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/21 15:44:44 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 12:37:10 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
-	*this = src;
+	this->_name = src.getName();
+	this->_hitPoint = 10;
+	this->_energyPoint = 10;
+	this->_attackDamage = 0;
 }
 
 ClapTrap::~ClapTrap(void)
@@ -30,8 +33,18 @@ ClapTrap::~ClapTrap(void)
 ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs)
 {
 	if (this != &rhs)
-		*this = rhs;
+	{
+		this->_name = rhs.getName();
+		this->_hitPoint = 10;
+		this->_energyPoint = 10;
+		this->_attackDamage = 0;
+	}
 	return (*this);
+}
+
+std::string	ClapTrap::getName(void) const
+{
+	return (this->_name);
 }
 
 void	ClapTrap::attack(const std::string & target)
