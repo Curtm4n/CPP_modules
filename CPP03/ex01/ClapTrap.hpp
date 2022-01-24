@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:44:41 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/23 13:24:14 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:27:37 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,14 @@ public:
 
 	ClapTrap &	operator=(ClapTrap const & rhs);
 
+	std::string	getName(void) const;
+	int			getPoints(unsigned int n) const;
+
 	void	attack(const std::string & target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
 protected:
-
-	ClapTrap(void);
 
 	std::string	_name;
 	int			_hitPoint;

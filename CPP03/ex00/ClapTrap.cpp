@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:54:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 12:37:10 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:15:58 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
-	this->_name = src.getName();
-	this->_hitPoint = 10;
-	this->_energyPoint = 10;
-	this->_attackDamage = 0;
+	std::cout << "Copy constructor called" << std::endl;
+	*this = src;
 }
 
 ClapTrap::~ClapTrap(void)
@@ -35,9 +33,9 @@ ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs)
 	if (this != &rhs)
 	{
 		this->_name = rhs.getName();
-		this->_hitPoint = 10;
-		this->_energyPoint = 10;
-		this->_attackDamage = 0;
+		this->_hitPoint = rhs.getPoints(1);
+		this->_energyPoint = rhs.getPoints(2);
+		this->_attackDamage = rhs.getPoints(3);
 	}
 	return (*this);
 }
@@ -45,6 +43,17 @@ ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs)
 std::string	ClapTrap::getName(void) const
 {
 	return (this->_name);
+}
+
+int	ClapTrap::getPoints(unsigned int n) const
+{
+	if (n == 1)
+		return (this->_hitPoint);
+	if (n == 2)
+		return (this->_energyPoint);
+	if (n == 3)
+		return (this->_attackDamage);
+	return (0);
 }
 
 void	ClapTrap::attack(const std::string & target)

@@ -6,17 +6,16 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:02:14 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/23 22:17:19 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:39:49 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "Hello world, i'm a ScavTrap" << std::endl;
-	_name = name;
 	_hitPoint = 100;
 	_energyPoint = 50;
 	_attackDamage = 20;
@@ -24,6 +23,7 @@ ScavTrap::ScavTrap(std::string name)
 
 ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
 {
+	std::cout << "Derived copy constructor called" << std::endl;
 	*this = src;
 }
 
@@ -35,7 +35,12 @@ ScavTrap::~ScavTrap(void)
 ScavTrap &	ScavTrap::operator=(ScavTrap const & rhs)
 {
 	if (this != &rhs)
-		*this = rhs;
+	{
+		_name = rhs.getName();
+		_hitPoint = rhs.getPoints(1);
+		_energyPoint = rhs.getPoints(2);
+		_attackDamage = rhs.getPoints(3);
+	}
 	return (*this);
 }
 

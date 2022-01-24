@@ -6,16 +6,11 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:54:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/23 22:30:06 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 14:28:52 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-ClapTrap::ClapTrap(void) : _name("default"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
-{
-	std::cout << "Am I empty ?" << std::endl;
-}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
@@ -24,6 +19,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
+	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
 
@@ -35,8 +31,29 @@ ClapTrap::~ClapTrap(void)
 ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs)
 {
 	if (this != &rhs)
-		*this = rhs;
+	{
+		this->_name = rhs.getName();
+		this->_hitPoint = rhs.getPoints(1);
+		this->_energyPoint = rhs.getPoints(2);
+		this->_attackDamage = rhs.getPoints(3);
+	}
 	return (*this);
+}
+
+std::string	ClapTrap::getName(void) const
+{
+	return (this->_name);
+}
+
+int	ClapTrap::getPoints(unsigned int n) const
+{
+	if (n == 1)
+		return (this->_hitPoint);
+	if (n == 2)
+		return (this->_energyPoint);
+	if (n == 3)
+		return (this->_attackDamage);
+	return (0);
 }
 
 void	ClapTrap::attack(const std::string & target)
