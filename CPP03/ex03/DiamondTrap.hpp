@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 17:04:37 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 17:06:55 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 22:32:40 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,19 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 public:
 
+	DiamondTrap(void);
 	DiamondTrap(std::string name);
 	DiamondTrap(DiamondTrap const & src);
-	~DiamondTrap(void);
+	virtual ~DiamondTrap(void);
 
 	DiamondTrap &	operator=(DiamondTrap const & rhs);
 
+	std::string	getName(void) const;
+	void		whoAmI(void);
+
 private:
+
+	std::string	_name;
 
 };
 

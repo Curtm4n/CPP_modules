@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:59:25 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 18:13:46 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 22:23:39 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	FragTrap(void);
 	FragTrap(std::string name);
 	FragTrap(FragTrap const & src);
-	~FragTrap(void);
+	virtual ~FragTrap(void);
 
 	FragTrap &	operator=(FragTrap const & rhs);
 

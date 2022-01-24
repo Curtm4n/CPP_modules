@@ -6,13 +6,13 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:10:25 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 18:15:51 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 22:16:41 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap()
+FragTrap::FragTrap(void)
 {
 	std::cout << "FragTrap default constructor" << std::endl;
 	_hitPoint = 100;

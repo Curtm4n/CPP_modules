@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 12:44:41 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 17:59:25 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 22:20:21 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	ClapTrap(void);
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const & src);
-	~ClapTrap(void);
+	virtual ~ClapTrap(void);
 
 	ClapTrap &	operator=(ClapTrap const & rhs);
 

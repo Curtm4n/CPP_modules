@@ -6,14 +6,14 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:02:14 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/24 18:11:05 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/24 22:16:59 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap()
+ScavTrap::ScavTrap(void)
 {
 	std::cout << "ScavTrap default constructor" << std::endl;
 	_hitPoint = 100;
@@ -54,10 +54,10 @@ ScavTrap &	ScavTrap::operator=(ScavTrap const & rhs)
 void	ScavTrap::attack(const std::string & target)
 {
 	if (!this->_energyPoint && this->_hitPoint)
-		std::cout << this->_name << " is too tired to attack" << std::endl;
+		std::cout << "ScavTrap " << this->getName() << " is too tired to attack" << std::endl;
 	if (this->_energyPoint && this->_hitPoint)
 	{
-		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing "
+		std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing "
 			<< this->_attackDamage << " points of damage!" << std::endl;
 		this->_energyPoint--;
 	}
@@ -65,5 +65,5 @@ void	ScavTrap::attack(const std::string & target)
 
 void	ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " is now in Gate keeper mode" << std::endl;
 }
