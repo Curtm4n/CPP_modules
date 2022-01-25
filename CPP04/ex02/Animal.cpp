@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 23:21:25 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/25 12:30:27 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:10:08 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,4 @@ Animal &	Animal::operator=(Animal const & rhs)
 std::string	Animal::getType(void) const
 {
 	return (this->_type);
-}
-
-void	Animal::makeSound(void) const
-{
 }

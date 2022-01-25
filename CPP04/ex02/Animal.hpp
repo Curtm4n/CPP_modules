@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 23:16:23 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/25 12:27:36 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:09:55 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	Animal &	operator=(Animal const & rhs);
 
 	std::string		getType(void) const;
-	virtual void	makeSound(void) const;
+	virtual void	makeSound(void) const = 0;
 
 protected:
 
