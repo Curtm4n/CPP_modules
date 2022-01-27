@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 23:48:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/25 15:48:52 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/27 23:54:14 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Dog::Dog(void)
 Dog::Dog(const Dog & src) : Animal(src)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
+	brain = 0;
 	*this = src;
 }
 
@@ -37,6 +38,7 @@ Dog &	Dog::operator=(Dog const & rhs)
 
 	if (this == &rhs)
 		return (*this);
+	delete brain;
 	brain = new Brain();
 	for (int i = 0; i < 100; i++)
 	{
