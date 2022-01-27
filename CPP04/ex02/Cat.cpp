@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 23:48:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/25 15:36:44 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 00:06:30 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Cat::Cat(void)
 Cat::Cat(const Cat & src) : Animal(src)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
+	brain = 0;
 	*this = src;
 }
 
@@ -37,6 +38,7 @@ Cat &	Cat::operator=(Cat const & rhs)
 
 	if (this == &rhs)
 		return (*this);
+	delete brain;
 	brain = new Brain();
 	for (int i = 0; i < 100; i++)
 	{
