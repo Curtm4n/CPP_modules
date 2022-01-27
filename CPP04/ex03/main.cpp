@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 21:22:25 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 01:13:46 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/27 14:51:49 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,22 @@ int	main(void)
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->unequip(0);
+	me->unequip(0);
+	me->unequip(1);
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("hfsjdfhskdf");
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
 
+	delete tmp;
 	delete bob;
 	delete me;
 	delete src;

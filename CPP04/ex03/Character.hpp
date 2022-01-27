@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 17:04:43 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/26 23:01:32 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/27 13:57:47 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ private:
 
 	std::string	_name;
 	AMateria	*inventory[4];
+	AMateria	*ground[10];
 
 };
 

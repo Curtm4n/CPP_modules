@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 21:23:07 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/26 22:55:28 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/27 14:31:09 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ICE_HPP
 
 # include "AMateria.hpp"
-//# include "ICharacter.hpp"
 
 class Ice : public AMateria
 {
