@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:11:09 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 23:03:06 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 21:19:53 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ public:
 	void				upgrade(void);
 	void				downgrade(void);
 	void				signForm(Form & form) const;
+	void				executeForm(Form const & form);
 
 private:
 

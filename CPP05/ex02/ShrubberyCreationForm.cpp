@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 15:12:24 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 21:13:08 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,21 @@ std::string const &	ShrubberyCreationForm::getTarget(void) const
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	this->checkRequirement(executor);
+
+	std::ifstream		ifs("ASCII_TREES");
+	if (!ifs.is_open())
+		return ;
+
+	std::stringstream	content;
+	std::string	str;
+
+	content << ifs.rdbuf();
+	ifs.close();
+	str = content.str();
+
+	std::ofstream	ofs(this->getTarget() + "_shrubbery");
+	ofs << str;
+	ofs.close();
 }
 
 std::ostream &	operator<<(std::ostream & o, ShrubberyCreationForm const & rhs)

@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 15:12:13 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 20:58:21 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,18 @@ std::string const &	RobotomyRequestForm::getTarget(void) const
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+	int	i;
+
+	srand((unsigned)time(0));
+	i = rand() % 2;
 	this->checkRequirement(executor);
+	std::cout << "* Make some drilling noises *" << std::endl;
+	if (i)
+		std::cout << this->getTarget() << " has been robotomized successfully"
+			<< std::endl;
+	else
+		std::cout << "Robotomy failed" << std::endl;
+
 }
 
 

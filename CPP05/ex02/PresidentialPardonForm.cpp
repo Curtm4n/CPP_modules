@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 15:12:03 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 20:25:32 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ std::string const &	PresidentialPardonForm::getTarget(void) const
 void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	this->checkRequirement(executor);
+	std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox"
+		<< std::endl;
 }
 
 std::ostream &	operator<<(std::ostream & o, PresidentialPardonForm const & rhs)

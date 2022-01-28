@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:57:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 15:13:18 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 20:34:39 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ROBOTOMYREQUESTFORM_HPP
 
 # include <iostream>
+# include <cstdlib>
 # include "Form.hpp"
 
 class RobotomyRequestForm : public Form

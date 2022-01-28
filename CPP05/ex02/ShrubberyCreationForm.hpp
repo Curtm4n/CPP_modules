@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:57:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 15:13:33 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 21:04:03 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 # include <iostream>
+# include <fstream>
+# include <sstream>
 # include "Form.hpp"
 
 class ShrubberyCreationForm : public Form
