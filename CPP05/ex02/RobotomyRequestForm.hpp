@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:57:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 12:54:24 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:13:18 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,29 +29,11 @@ public:
 	RobotomyRequestForm &	operator=(RobotomyRequestForm const & rhs);
 
 	std::string const &	getTarget(void) const;
+	virtual void		execute(Bureaucrat const & executor) const;
 
 private:
 
 	std::string	_target;
-
-/*public:
-
-	class GradeTooHighException : public std::exception
-	{
-
-		public:
-
-			virtual const char	*what(void) const throw();
-
-	};
-	class GradeTooLowException : public std::exception
-	{
-
-		public:
-
-			virtual const char	*what(void) const throw();
-
-	};*/
 
 };
 

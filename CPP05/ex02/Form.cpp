@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 12:41:57 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:14:46 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,14 @@ void	Form::setSigned(bool sign)
 	_signed = sign;
 }
 
+void	Form::checkRequirement(Bureaucrat const & b) const
+{
+	if (!this->getSigned())
+		throw Form::FormNotSigned();
+	if (this->_gradeExec < b.getGrade())
+		throw Form::GradeTooLowException();
+}
+
 const char	*Form::GradeTooHighException::what(void) const throw()
 {
 	return ("Grade too high");
@@ -94,6 +102,12 @@ const char	*Form::GradeTooLowException::what(void) const throw()
 {
 	return ("Grade too low");
 }
+
+const char	*Form::FormNotSigned::what(void) const throw()
+{
+	return ("Form not signed");
+}
+
 
 std::ostream &	operator<<(std::ostream & o, Form const & rhs)
 {

@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 12:55:38 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:12:24 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,10 @@ std::string const &	ShrubberyCreationForm::getTarget(void) const
 	return (this->_target);
 }
 
-/*const char	*ShrubberyCreationForm::GradeTooHighException::what(void) const throw()
+void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	return ("Grade too high");
+	this->checkRequirement(executor);
 }
-
-const char	*ShrubberyCreationForm::GradeTooLowException::what(void) const throw()
-{
-	return ("Grade too low");
-}*/
 
 std::ostream &	operator<<(std::ostream & o, ShrubberyCreationForm const & rhs)
 {

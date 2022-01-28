@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 12:54:51 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:12:13 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ RobotomyRequestForm::RobotomyRequestForm(std::string const & target) : Form("Rob
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src) : Form(src), _target(src.getTarget())
 {
 	std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
-	//*this = src; //normalement inutile
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(void)
@@ -48,15 +47,11 @@ std::string const &	RobotomyRequestForm::getTarget(void) const
 	return (this->_target);
 }
 
-/*const char	*RobotomyRequestForm::GradeTooHighException::what(void) const throw()
+void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-	return ("Grade too high");
+	this->checkRequirement(executor);
 }
 
-const char	*RobotomyRequestForm::GradeTooLowException::what(void) const throw()
-{
-	return ("Grade too low");
-}*/
 
 std::ostream &	operator<<(std::ostream & o, RobotomyRequestForm const & rhs)
 {

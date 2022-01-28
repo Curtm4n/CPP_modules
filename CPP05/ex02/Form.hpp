@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:57:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 12:36:50 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:14:34 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ public:
 	int const &			getGradeExec(void) const;
 	void				setSigned(bool sign);
 
-	void				beSigned(Bureaucrat const & b);
+	void		beSigned(Bureaucrat const & b);
+	void		checkRequirement(Bureaucrat const & b) const;
+	virtual void	execute(Bureaucrat const & executor) const = 0;
 
 private:
 
@@ -64,6 +66,14 @@ public:
 
 			virtual const char	*what(void) const throw();
 
+	};
+	class FormNotSigned : public std::exception
+	{
+
+		public:
+
+			virtual const char	*what(void) const throw();
+	
 	};
 
 };

@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 12:53:49 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:12:03 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ PresidentialPardonForm::PresidentialPardonForm(std::string const & target) : For
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src) : Form(src), _target(src.getTarget())
 {
 	std::cout << "PresidentialPardonForm copy constructor called" << std::endl;
-	//*this = src; //normalement inutile
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(void)
@@ -48,15 +47,10 @@ std::string const &	PresidentialPardonForm::getTarget(void) const
 	return (this->_target);
 }
 
-/*const char	*PresidentialPardonForm::GradeTooHighException::what(void) const throw()
+void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-	return ("Grade too high");
+	this->checkRequirement(executor);
 }
-
-const char	*PresidentialPardonForm::GradeTooLowException::what(void) const throw()
-{
-	return ("Grade too low");
-}*/
 
 std::ostream &	operator<<(std::ostream & o, PresidentialPardonForm const & rhs)
 {
