@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:11:02 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 23:01:22 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:17:14 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	Bureaucrat::signForm(Form & form) const
 	}
 	else
 		std::cout << this->_name << " couldn't sign " << form.getName()
-			<< " because grade is to low" << std::endl;
+			<< " because grade is too low" << std::endl;
 }
 
 void	Bureaucrat::checkGrade(void)

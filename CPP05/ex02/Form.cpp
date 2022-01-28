@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 23:04:21 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 12:41:57 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ Form::Form(Form const & src) : _name(src.getName()), _signed(src.getSigned()),
 	_gradeSign(src.getGradeSigned()), _gradeExec(src.getGradeExec())
 {
 	std::cout << "Form copy constructor called" << std::endl;
-	*this = src;
 }
 
 Form::~Form(void)
@@ -79,6 +78,11 @@ int const &	Form::getGradeSigned(void) const
 int const &	Form::getGradeExec(void) const
 {
 	return (this->_gradeExec);
+}
+
+void	Form::setSigned(bool sign)
+{
+	_signed = sign;
 }
 
 const char	*Form::GradeTooHighException::what(void) const throw()

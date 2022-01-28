@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:57:26 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 22:59:26 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/28 09:59:06 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Form(void);
 	Form(std::string const & name, int toSign, int toExec);
 	Form(Form const & src);
-	~Form(void);
+	virtual ~Form(void);
 
 	Form &	operator=(Form const & rhs);
 

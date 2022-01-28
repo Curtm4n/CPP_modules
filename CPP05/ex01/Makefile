@@ -6,11 +6,11 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/27 19:55:01 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/28 11:09:11 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
+NAME = forms
 
 SRCS = main.cpp	\
 		Bureaucrat.cpp	\

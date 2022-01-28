@@ -6,15 +6,18 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/27 19:55:01 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/28 12:26:54 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
+NAME = realForms
 
 SRCS = main.cpp	\
 		Bureaucrat.cpp	\
-		Form.cpp
+		Form.cpp	\
+		PresidentialPardonForm.cpp	\
+		RobotomyRequestForm.cpp	\
+		ShrubberyCreationForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
