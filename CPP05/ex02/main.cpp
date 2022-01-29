@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:10:12 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 21:29:14 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/29 12:13:28 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(void)
 {
 	try
 	{
-		Bureaucrat jerry("Jerry", 10);
-		PresidentialPardonForm a("John Wick");
+		Bureaucrat jerry("Jerry", 3);
+		ShrubberyCreationForm a("John Wick");
 
 		jerry.signForm(a);
 		jerry.executeForm(a);

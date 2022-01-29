@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/28 21:13:08 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/29 12:11:38 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	ifs.close();
 	str = content.str();
 
-	std::ofstream	ofs(this->getTarget() + "_shrubbery");
+	std::string filename(this->getTarget() + "_shrubbery");
+	std::ofstream	ofs(filename.c_str());
 	ofs << str;
 	ofs.close();
 }
