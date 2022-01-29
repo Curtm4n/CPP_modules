@@ -6,11 +6,11 @@
 #    By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 16:19:27 by cdapurif          #+#    #+#              #
-#    Updated: 2022/01/29 13:08:37 by cdapurif         ###   ########.fr        #
+#    Updated: 2022/01/29 14:20:05 by cdapurif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = realForms
+NAME = coffeeMakers
 
 SRCS = main.cpp	\
 		Bureaucrat.cpp	\
