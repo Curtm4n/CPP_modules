@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 14:10:05 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/30 17:10:13 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/30 17:17:26 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,10 @@ void	Convert::toChar(void) const
 {
 	char	c = static_cast<char>(_litteral);
 
-	if (c >= 32 && c <= 126)
+	if (_litteral >= 32 && _litteral <= 126)
 		std::cout << "char: '" << c << "'" << std::endl;
+	else if ((_litteral >= 0 && _litteral < 32) || _litteral == 127)
+		std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: impossible" << std::endl;
 }
