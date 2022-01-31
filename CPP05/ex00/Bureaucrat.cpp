@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:11:02 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 18:42:36 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/31 12:42:23 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 	std::cout << "Bureaucrat parameter constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const & src)
+Bureaucrat::Bureaucrat(Bureaucrat const & src) : _name(src.getName()), _grade(src.getGrade())
 {
 	std::cout << "Bureaucrat copy constructor called" << std::endl;
-	*this = src;
 }
 
 Bureaucrat::~Bureaucrat(void)

@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:11:09 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 18:42:04 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/31 12:48:53 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <stdexcept>
+#include "Colors.hpp"
 
 class Bureaucrat
 {
