@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 19:02:29 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 23:04:21 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/31 12:54:32 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ Form::Form(Form const & src) : _name(src.getName()), _signed(src.getSigned()),
 	_gradeSign(src.getGradeSigned()), _gradeExec(src.getGradeExec())
 {
 	std::cout << "Form copy constructor called" << std::endl;
-	*this = src;
 }
 
 Form::~Form(void)

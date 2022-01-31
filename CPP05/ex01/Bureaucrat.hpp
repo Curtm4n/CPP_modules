@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:11:09 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/27 23:03:06 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/31 12:57:32 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <stdexcept>
 # include "Form.hpp"
+# include "Colors.hpp"
 
 class Form;
 
