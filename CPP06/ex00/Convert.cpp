@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 14:10:05 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/30 17:17:26 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/01/31 23:21:02 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ Convert::Convert(std::string litteral)
 {
 	if (Convert::verbose)
 		std::cout << "Convert parameter constructor called" << std::endl;
-	_litteral = strtold(litteral.c_str(), 0);
+	if (litteral.length() == 3 && (litteral[0] == '\'' && litteral[2] == '\''))
+		_litteral = static_cast<char>(litteral[1]);
+	else
+		_litteral = strtold(litteral.c_str(), 0);
 }
 
 Convert::Convert(Convert const & src)
