@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 13:12:51 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/01 14:23:34 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/01 15:39:21 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ template<typename T>
 void	iter(T *array, unsigned int length, void (*f)(T &))
 {
 	for (unsigned int i = 0; i < length; i++)
-	{
 		(*f)(array[i]);
-	}
 }
 
 #endif
