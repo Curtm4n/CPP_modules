@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:40:41 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/01 17:16:43 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/01 21:21:06 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,25 @@ public:
 	virtual ~Array(void);
 
 	Array &	operator=(Array const & rhs);
+	T	operator[](unsigned int const & index);
 
-	T	getElem(unsigned int const & i);
-	void	setElem(unsigned int const & i, T e);
-	
+	T						getElem(unsigned int const & i) const;
+	void					setElem(T e);
+	unsigned int const &	getSize(void) const;
+	unsigned int const &	size(void) const;
+
 	static bool	verbose;
 
 private:
 
 	unsigned int	_size;
-	T		*_elem;
+	unsigned int	_counter;
+	T				*_elem;
 
 };
 
 template<typename T>
-Array<T>::Array(void) : _size(0)
+Array<T>::Array(void) : _size(0), _counter(0)
 {
 	if (Array::verbose)
 		std::cout << "Array default constructor called" << std::endl;
@@ -50,19 +54,21 @@ Array<T>::Array(void) : _size(0)
 }
 
 template<typename T>
-Array<T>::Array(unsigned int n) : _size(n)
+Array<T>::Array(unsigned int n) : _size(n), _counter(0)
 {
 	if (Array::verbose)
 		std::cout << "Array parameter constructor called" << std::endl;
-	_elem = new T[n];
+	if (n == 0)
+		_elem = new T[1];
+	else
+		_elem = new T[n];
 }
 
 template<typename T>
-Array<T>::Array(Array<T> const & src)
+Array<T>::Array(Array<T> const & src) : _elem(NULL)
 {
 	if (Array::verbose)
 		std::cout << "Array copy constructor called" << std::endl;
-	_elem = NULL;
 	*this = src;
 }
 
@@ -80,37 +86,67 @@ Array<T> &	Array<T>::operator=(Array<T> const & rhs)
 	if (this == &rhs)
 		return (*this);
 	delete [] _elem;
+	_size = rhs.getSize();
+	_counter = rhs.size();
 	if (_size == 0)
 		_elem = new T[1];
 	else
 	{
 		_elem = new T[_size];
-		for (int i = 0; i < _size; i++)
+		for (unsigned int i = 0; i < _counter; i++)
 			_elem[i] = rhs.getElem(i);
 	}
 	return (*this);
 }
 
 template<typename T>
-T	Array<T>::getElem(unsigned int const & i)
+T	Array<T>::operator[](unsigned int const & index)
 {
-	if (i >= _size)
-		return (0);
-	return (*this->_elem[i]);
+	return (this->getElem(index));
 }
 
 template<typename T>
-void	Array<T>::setElem(unsigned int const & i, T e)
+T	Array<T>::getElem(unsigned int const & i) const
 {
-	if (i >= _size)
+	if (i >= _counter || _size == 0)
+		throw std::exception();
+	return (this->_elem[i]);
+}
+
+template<typename T>
+void	Array<T>::setElem(T e)
+{
+	unsigned int i = 0;
+
+	if (_size == 0)
 	{
-		std::cout << Red << "Cannot place elem at this index" << Reset << std::endl;
+		std::cout << Red << "There's no place in this array" << Reset << std::endl;
 		return ;
 	}
+	while (i < _counter)
+		i++;
+	if (i >= _size)
+	{
+		std::cout << Red << "Array full" << Reset << std::endl;
+		return ;
+	}
+	_counter++;
 	this->_elem[i] = e;
 }
 
 template<typename T>
-bool	Array<T>::verbose = true;
+unsigned int const &	Array<T>::getSize(void) const
+{
+	return (this->_size);
+}
+
+template<typename T>
+unsigned int const &	Array<T>::size(void) const
+{
+	return (this->_counter);
+}
+
+template<typename T>
+bool	Array<T>::verbose = false;
 
 #endif
