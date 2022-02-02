@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:40:02 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/01 21:30:09 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/02 22:34:03 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 	std::cout << b[0] << std::endl;
 	try
 	{
-		std::cout << b[2] << std::endl;
+		std::cout << b[5] << std::endl;
 	}
 	catch (std::exception & e)
 	{

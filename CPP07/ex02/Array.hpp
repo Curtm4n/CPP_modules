@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:40:41 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/01 21:21:06 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/02 22:32:59 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ T	Array<T>::operator[](unsigned int const & index)
 template<typename T>
 T	Array<T>::getElem(unsigned int const & i) const
 {
-	if (i >= _counter || _size == 0)
+	if (i >= _size || _size == 0)
 		throw std::exception();
 	return (this->_elem[i]);
 }
