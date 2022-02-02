@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:10:12 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/01/29 14:13:33 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:21:15 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int	main(void)
 	Form	*rrf;
 
 	rrf = someIntern.makeForm("robotomy request", "Bender");
-	std::cout << *rrf << std::endl;
+	if (rrf)
+		std::cout << *rrf << std::endl;
 	delete rrf;
 
 	return (0);
