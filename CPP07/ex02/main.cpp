@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:40:02 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/02 22:34:03 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:30:46 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main(void)
 	b.setElem(7);
 	std::cout << b.getElem(0) << " " << b.getElem(1) << std::endl;
 	std::cout << a.size() << " " << b.size() << std::endl;
+	b[0] = 7;
 	std::cout << b[0] << std::endl;
 	try
 	{

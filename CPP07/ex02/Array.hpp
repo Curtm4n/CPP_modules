@@ -6,7 +6,7 @@
 /*   By: cdapurif <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:40:41 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/02 22:32:59 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:30:30 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ public:
 	virtual ~Array(void);
 
 	Array &	operator=(Array const & rhs);
-	T	operator[](unsigned int const & index);
+	T &		operator[](unsigned int const & index);
 
-	T						getElem(unsigned int const & i) const;
+	T &						getElem(unsigned int const & i) const;
 	void					setElem(T e);
 	unsigned int const &	getSize(void) const;
 	unsigned int const &	size(void) const;
@@ -100,13 +100,13 @@ Array<T> &	Array<T>::operator=(Array<T> const & rhs)
 }
 
 template<typename T>
-T	Array<T>::operator[](unsigned int const & index)
+T &	Array<T>::operator[](unsigned int const & index)
 {
 	return (this->getElem(index));
 }
 
 template<typename T>
-T	Array<T>::getElem(unsigned int const & i) const
+T &	Array<T>::getElem(unsigned int const & i) const
 {
 	if (i >= _size || _size == 0)
 		throw std::exception();
