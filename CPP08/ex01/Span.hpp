@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:28:47 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/02 20:16:11 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/03 11:10:26 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ public:
 	unsigned int		shortestSpan(void);
 	unsigned int		longestSpan(void);
 	std::vector<int>	getArray(void) const;
-	int					getMax(void) const;
-	int					size(void) const;
+	unsigned int				getMax(void) const;
+	unsigned int					size(void) const;
 
 	static bool	verbose;
 
 private:
 
 	std::vector<int>	_array;
-	int					_max;
+	unsigned int				_max;
 
 public:
 

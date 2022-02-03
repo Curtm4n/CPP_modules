@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:29:43 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/03 00:29:19 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/03 11:11:49 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ unsigned int	Span::shortestSpan(void)
 	{
 		for (it2 = it + 1; it2 != ite; it2++)
 		{
-			if (abs(*it - *it2) < diff)
+			if (static_cast<unsigned int>(abs(*it - *it2)) < diff)
 				diff = abs(*it - *it2);
 		}
 	}
@@ -91,12 +91,12 @@ std::vector<int>	Span::getArray(void) const
 	return (this->_array);
 }
 
-int	Span::getMax(void) const
+unsigned int	Span::getMax(void) const
 {
 	return (this->_max);
 }
 
-int	Span::size(void) const
+unsigned int	Span::size(void) const
 {
 	return (this->_array.size());
 }
