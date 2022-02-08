@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:29:43 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/03 11:11:49 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/08 19:51:50 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,9 @@ unsigned int	Span::shortestSpan(void)
 	if (this->size() < 2)
 		throw Span::notEnoughInt();
 
-	std::vector<int>			vector = this->getArray();
+	//classic version
+
+	/*std::vector<int>			vector = this->getArray();
 	std::vector<int>::iterator	it;
 	std::vector<int>::iterator	it2;
 	std::vector<int>::iterator	ite = vector.end();
@@ -70,8 +72,17 @@ unsigned int	Span::shortestSpan(void)
 			if (static_cast<unsigned int>(abs(*it - *it2)) < diff)
 				diff = abs(*it - *it2);
 		}
-	}
-	return (diff);
+	}*/
+
+	//algorithm version
+
+	std::vector<int>	diff(this->size());
+	std::vector<int>	copy = this->getArray();
+
+	sort(copy.begin(), copy.end());
+	std::adjacent_difference(copy.begin(), copy.end(), diff.begin());
+	unsigned int	res = *(min_element(diff.begin() + 1, diff.end()));
+	return (res);
 }
 
 unsigned int	Span::longestSpan(void)

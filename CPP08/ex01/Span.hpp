@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:28:47 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/03 11:10:26 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/08 19:42:33 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <vector>
 # include <algorithm>
+# include <numeric>
 # include <cstdlib>
 # include <climits>
 

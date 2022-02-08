@@ -6,7 +6,7 @@
 /*   By: cdapurif <cdapurif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:28:01 by cdapurif          #+#    #+#             */
-/*   Updated: 2022/02/03 12:30:28 by cdapurif         ###   ########.fr       */
+/*   Updated: 2022/02/08 19:44:15 by cdapurif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 	catch (std::exception & e)
 	{
 		std::cout << e.what() << std::endl;
-	}	
+	}
 }*/
 
 /*void	addRange(Span & sp, int nb, int start, int value)
@@ -35,12 +35,12 @@
 	(void)start;
 
 	std::vector<int>	v = sp.getArray();
-	
+
 	v.insert(v.end(), nb, value);
-	
+
 	std::vector<int>::iterator	it;
 	std::vector<int>::iterator	ite = v.end();
-	
+
 	try
 	{
 		for (it = v.begin() + sp.size(); it != ite; it++)
@@ -58,10 +58,10 @@ void	addRange(Span & sp, int nb, int start, int end)
 {
 	if (nb <= 0 || start > end)
 		return ;
-	
+
 	std::vector<int>	v = sp.getArray();
 	std::vector<int>	v2;
-	
+
 	for (int i = start; i <= end; i++)
 	{
 		v2.push_back(i);
@@ -69,12 +69,12 @@ void	addRange(Span & sp, int nb, int start, int end)
 		if (!nb)
 			break ;
 	}
-	
+
 	v.insert(v.end(), v2.begin(), v2.end());
-	
+
 	std::vector<int>::iterator	it;
 	std::vector<int>::iterator	ite = v.end();
-	
+
 	try
 	{
 		for (it = v.begin() + sp.size(); it != ite; it++)
@@ -123,7 +123,7 @@ int	main(void)
 	std::cout << b.longestSpan() << std::endl;
 
 	printContent(b);
-	addRange(b, 5, 40, 60);
+	addRange(b, 5, 42, 75);
 	printContent(b);
 
 	try
